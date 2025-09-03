@@ -27,7 +27,7 @@ async function renderDashboard() {
 
     logoutButton.addEventListener('click', () => {
         sessionStorage.clear();
-        window.location.href = '/pages/index.html';
+        window.location.href = '/index.html';
     });
 }
 

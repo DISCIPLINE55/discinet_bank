@@ -213,7 +213,7 @@ export const session = JSON.parse(sessionStorage.getItem(STORAGE_PREFIX + 'sessi
 
 export function checkAuth() {
     if (!session) {
-        window.location.href = '/pages/index.html';
+        window.location.href = '/index.html';
         return false;
     }
     return true;
@@ -233,7 +233,7 @@ export function showToast(message, type = 'success') {
 }
 
 export function formatCurrency(amount) {
-    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(amount);
+    return new Intl.NumberFormat('en-GH', { style: 'currency', currency: 'GHC' }).format(amount);
 }
 
 export async function loadComponent(selector, path) {

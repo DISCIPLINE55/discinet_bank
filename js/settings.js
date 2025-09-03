@@ -86,7 +86,7 @@ confirmButton.addEventListener('click', async () => {
     try {
         await db.deleteUser(session.userId);
         showToast('Account deleted successfully. Redirecting...', 'success');
-        setTimeout(() => window.location.href = '/pages/index.html', 1500);
+        setTimeout(() => window.location.href = '/index.html', 1500);
     } catch (error) {
         showToast(error.message, 'error');
     }
