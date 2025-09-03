@@ -1,0 +1,32 @@
+ /* /css/cards.css */
+.card {
+    background-color: var(--surface);
+    border-radius: 16px;
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+    color: var(--text);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.glassy-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+}
+
+.card-number, .card-holder, .card-expiry {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+}

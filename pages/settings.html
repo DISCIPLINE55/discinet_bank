@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisciNet | Settings</title>
+    <meta name="description" content="Manage your DisciNet account settings, including profile information and account deletion.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://discinet.com/pages/settings.html">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta property="og:title" content="DisciNet Settings">
+    <meta property="og:description" content="Update your profile and account settings.">
+    <meta property="og:image" content="https://discinet.com/assets/preview.png">
+    <meta property="og:url" content="https://discinet.com/pages/settings.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+    <aside id="sidebar-placeholder"></aside>
+    <main class="main-content" role="main">
+        <section class="page-title-header" aria-labelledby="settings-heading">
+            <h1 id="settings-heading">Settings</h1>
+        </section>
+        <section class="page-form-section">
+            <h2 class="form-section-title">Change Account Details</h2>
+            <form id="update-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <span>Username</span>
+                        <input type="text" id="settings-username" name="username" required placeholder="Enter your username" title="Username">
+                    </div>
+                    <div class="field">
+                        <span>Email</span>
+                        <input type="email" id="settings-email" name="email" required placeholder="Enter your email" title="Email address">
+                    </div>
+                </div>
+                <button type="submit" class="button button-primary">Update Details</button>
+            </form>
+        </section>
+        <section class="page-form-section">
+            <h2 class="form-section-title">Change Password</h2>
+            <form id="password-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <span>New Password</span>
+                        <input type="password" id="new-password" name="newPassword" required minlength="6" title="New Password" placeholder="Enter new password">
+                    </div>
+                    <div class="field">
+                        <span>Confirm Password</span>
+                        <input type="password" id="confirm-password" name="confirmPassword" required minlength="6" title="Confirm Password" placeholder="Confirm new password">
+                    </div>
+                </div>
+                <button type="submit" class="button button-primary">Change Password</button>
+            </form>
+        </section>
+        <section class="page-form-section danger-zone">
+            <h2 class="form-section-title">Danger Zone</h2>
+            <p>This action is irreversible. Proceed with caution.</p>
+            <button id="delete-account-button" type="button" class="button button-danger">Delete My Account</button>
+        </section>
+    </main>
+    <nav id="tabbar-placeholder"></nav>
+    <div id="modals-placeholder"></div>
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/js/core.js"></script>
+    <script type="module" src="/js/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisciNet | Dashboard</title>
+    <meta name="description" content="View your account balance, cards, and recent transactions on the DisciNet banking dashboard.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://discinet.com/pages/dashboard.html">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta property="og:title" content="DisciNet Dashboard">
+    <meta property="og:description" content="Manage your finances, view transactions, and more.">
+    <meta property="og:image" content="https://discinet.com/assets/preview.png">
+    <meta property="og:url" content="https://discinet.com/pages/dashboard.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cards.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+    <aside id="sidebar-placeholder"></aside>
+    <main class="main-content" role="main">
+        <section class="page-title-header" aria-labelledby="dashboard-heading">
+            <h1 id="dashboard-heading">Dashboard</h1>
+            <p>Welcome back, <span id="username-display"></span></p>
+        </section>
+
+        <section class="balance-card card glassy-card" aria-labelledby="balance-heading">
+            <h2 id="balance-heading" class="card-title">Account Balance</h2>
+            <div class="balance-display">
+                <div id="balance-shimmer" class="shimmer-wrapper">
+                    <div class="shimmer"></div>
+                </div>
+                <div id="balance-value" class="balance-value hide"></div>
+            </div>
+        </section>
+
+        <section class="quick-actions" aria-labelledby="quick-actions-heading">
+            <h2 id="quick-actions-heading">Quick Actions</h2>
+            <div class="actions-grid">
+                <a href="/pages/deposit.html" class="action-item">Deposit</a>
+                <a href="/pages/withdraw.html" class="action-item">Withdraw</a>
+                <a href="/pages/transfer.html" class="action-item">Transfer</a>
+                <a href="/pages/bills.html" class="action-item">Pay Bills</a>
+                <a href="/pages/mobile.html" class="action-item">Buy Credit</a>
+                <a href="/pages/fees.html" class="action-item">Pay Fees</a>
+            </div>
+        </section>
+
+        <section class="card-section" aria-labelledby="cards-heading">
+            <h2 id="cards-heading">My Cards</h2>
+            <div id="cards-container" class="cards-grid">
+                <div class="card add-card" id="add-card-button" role="button" aria-label="Add a new card">
+                    <p>+ Add New Card</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="transactions-section" aria-labelledby="transactions-heading">
+            <h2 id="transactions-heading">Recent Activity</h2>
+            <div class="transactions-filter">
+                <input type="text" id="transaction-search" placeholder="Search by note or amount...">
+                <select id="transaction-type-filter" aria-label="Filter transactions by type">
+                    <option value="">All Types</option>
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="bill">Bill Payment</option>
+                    <option value="mobile">Mobile Credit</option>
+                    <option value="fees">Fee Payment</option>
+                </select>
+            </div>
+            <div id="transactions-list" class="transactions-list" aria-live="polite">
+                <div class="empty-state">No transactions yet.</div>
+            </div>
+        </section>
+    </main>
+    <nav id="tabbar-placeholder"></nav>
+    <div id="modals-placeholder"></div>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/js/core.js"></script>
+    <script type="module" src="/js/dashboard.js"></script>
+    <script type="module" src="/js/cards.js"></script>
+</body>
+</html> 

@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisciNet | Pay Bills</title>
+    <meta name="description" content="Pay your utility bills securely with DisciNet.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://discinet.com/pages/bills.html">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta property="og:title" content="DisciNet Pay Bills">
+    <meta property="og:description" content="Settle your utility bills easily.">
+    <meta property="og:image" content="https://discinet.com/assets/preview.png">
+    <meta property="og:url" content="https://discinet.com/pages/bills.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+    <aside id="sidebar-placeholder"></aside>
+    <main class="main-content" role="main">
+        <section class="page-title-header" aria-labelledby="bills-heading">
+            <h1 id="bills-heading">Pay Bills</h1>
+        </section>
+        <section class="page-form-section">
+            <form id="bills-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="bill-type">Bill Type</label>
+                        <select id="bill-type" name="billType" required>
+                            <option value="">Select a bill type</option>
+                            <option value="electricity">Electricity</option>
+                            <option value="water">Water</option>
+                            <option value="internet">Internet</option>
+                            <option value="tv">Cable TV</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <span>Reference Number</span>
+                        <input type="text" id="bill-ref" name="billRef" required placeholder="e.g., Meter number, account number">
+                    </div>
+                    <div class="field">
+                        <span>Amount ($)</span>
+                        <input type="number" id="bill-amount" name="amount" min="1" step="0.01" required placeholder="Enter amount" title="Amount ($)">
+                    </div>
+                    <div class="field">
+                        <span>Note (optional)</span>
+                        <input type="text" id="bill-note" name="note" placeholder="Add a note (optional)" title="Note (optional)">
+                    </div>
+                </div>
+                <button type="submit" class="button button-primary">Pay Bill</button>
+            </form>
+        </section>
+    </main>
+    <nav id="tabbar-placeholder"></nav>
+    <div id="modals-placeholder"></div>
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/js/core.js"></script>
+    <script type="module" src="/js/bills.js"></script>
+</body>
+</html>

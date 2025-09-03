@@ -1,0 +1,37 @@
+ <div id="card-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="card-modal-title" aria-hidden="true">
+    <div class="modal-content">
+        <span class="close-button" role="button" aria-label="Close modal">&times;</span>
+        <h2 id="card-modal-title">Add New Card</h2>
+        <form id="add-card-form">
+            <div class="form-grid">
+                <div class="field">
+                    <span>Card Holder Name</span>
+                    <input type="text" id="card-holder" name="holder" required>
+                </div>
+                <div class="field">
+                    <span>Card Number</span>
+                    <input type="text" id="card-number" name="number" required pattern="[0-9]{16}" placeholder="16 digits">
+                </div>
+                <div class="field">
+                    <span>Expiry (MM/YY)</span>
+                    <input type="text" id="card-expiry" name="expiry" required pattern="(0[1-9]|1[0-2])\/?([0-9]{2})" placeholder="MM/YY">
+                </div>
+            </div>
+            <button type="submit" class="button button-primary">Add Card</button>
+        </form>
+    </div>
+</div>
+
+<div id="confirm-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="confirm-modal-title" aria-hidden="true">
+    <div class="modal-content">
+        <span class="close-button" role="button" aria-label="Close modal">&times;</span>
+        <h2 id="confirm-modal-title">Confirm Action</h2>
+        <p id="confirm-modal-text">Are you sure you want to proceed?</p>
+        <div class="modal-buttons">
+            <button id="confirm-modal-cancel" class="button button-secondary">Cancel</button>
+            <button id="confirm-modal-confirm" class="button button-danger">Confirm</button>
+        </div>
+    </div>
+</div>
+
+<div id="toast-container" class="toast-container" aria-live="polite"></div>

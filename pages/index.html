@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisciNet | Login</title>
+    <meta name="description" content="Securely log in or register for your DisciNet online banking account to manage your finances.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://discinet.com/pages/index.html">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta property="og:title" content="DisciNet Online Banking">
+    <meta property="og:description" content="Securely log in to manage your finances.">
+    <meta property="og:image" content="https://discinet.com/assets/preview.png">
+    <meta property="og:url" content="https://discinet.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+</head>
+<body class="auth-page">
+    <main class="auth-container" role="main">
+        <section class="auth-card" aria-label="Login and Registration">
+            <h1 class="auth-title">DisciNet</h1>
+            <nav class="auth-tabs">
+                <button id="login-tab" class="active">Login</button>
+                <button id="register-tab">Register</button>
+            </nav>
+            <div id="login-form" class="auth-form active">
+                <form id="login-form-el">
+                    <div class="form-grid">
+                        <div class="field">
+                            <span>Username</span>
+                            <input type="text" id="login-username" name="username" required title="Enter your username" placeholder="Username">
+                        </div>
+                        <div class="field">
+                            <span>Password</span>
+                            <input type="password" id="login-password" name="password" required title="Enter your password" placeholder="Password">
+                        </div>
+                    </div>
+                    <button type="submit" class="button button-primary">Log In</button>
+                </form>
+            </div>
+            <div id="register-form" class="auth-form">
+                <form id="register-form-el">
+                    <div class="form-grid">
+                        <div class="field">
+                            <span>Username</span>
+                            <input type="text" id="register-username" name="username" required title="Enter your username" placeholder="Username">
+                        </div>
+                        <div class="field">
+                            <span>Email</span>
+                            <input type="email" id="register-email" name="email" required title="Enter your email address" placeholder="Email">
+                        </div>
+                        <div class="field">
+                            <span>Password</span>
+                            <input type="password" id="register-password" name="password" required minlength="6" title="Enter your password" placeholder="Password">
+                        </div>
+                        <div class="field">
+                            <span>Confirm Password</span>
+                            <input type="password" id="register-confirm-password" name="confirmPassword" required minlength="6" title="Confirm your password" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <button type="submit" class="button button-primary">Register</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/js/core.js"></script>
+    <script type="module" src="/js/auth.js"></script>
+</body>
+</html>

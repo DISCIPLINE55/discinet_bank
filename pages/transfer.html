@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DisciNet | Transfer</title>
+    <meta name="description" content="Transfer funds to other accounts with DisciNet.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://discinet.com/pages/transfer.html">
+    <link rel="icon" href="/assets/favicon.ico">
+    <meta property="og:title" content="DisciNet Transfer">
+    <meta property="og:description" content="Send money to anyone.">
+    <meta property="og:image" content="https://discinet.com/assets/preview.png">
+    <meta property="og:url" content="https://discinet.com/pages/transfer.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/toast.css">
+</head>
+<body>
+    <header id="header-placeholder"></header>
+    <aside id="sidebar-placeholder"></aside>
+    <main class="main-content" role="main">
+        <section class="page-title-header" aria-labelledby="transfer-heading">
+            <h1 id="transfer-heading">Transfer Funds</h1>
+        </section>
+        <section class="page-form-section">
+            <form id="transfer-form">
+                <div class="form-grid">
+                    <div class="field">
+                        <label for="transfer-type">Transfer Type</label>
+                        <select id="transfer-type" name="transferType" required>
+                            <option value="">Select type</option>
+                            <option value="internal">Internal (DisciNet User)</option>
+                            <option value="external">External (Bank Account)</option>
+                            <option value="mobile-money">Mobile Money</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <span>Recipient</span>
+                        <input type="text" id="transfer-recipient" name="recipient" required placeholder="Username or Account Number">
+                    </div>
+                    <div class="field">
+                        <span>Amount ($)</span>
+                        <input type="number" id="transfer-amount" name="amount" min="1" step="0.01" required placeholder="Enter amount" title="Amount ($)">
+                    </div>
+                    <div class="field">
+                        <span>Note (optional)</span>
+                        <input type="text" id="transfer-note" name="note" placeholder="Add a note (optional)" title="Note (optional)">
+                    </div>
+                </div>
+                <button type="submit" class="button button-primary">Transfer</button>
+            </form>
+        </section>
+    </main>
+    <nav id="tabbar-placeholder"></nav>
+    <div id="modals-placeholder"></div>
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <script type="module" src="/js/core.js"></script>
+    <script type="module" src="/js/transfer.js"></script>
+</body>
+</html>
